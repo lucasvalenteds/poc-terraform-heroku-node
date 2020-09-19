@@ -32,6 +32,10 @@ provider "heroku" {
 resource "heroku_app" "application" {
   name   = var.heroku_app_name
   region = var.heroku_region
+
+  config_vars = {
+    NODE_ENV = "production"
+  }
 }
 
 resource "heroku_build" "application" {
