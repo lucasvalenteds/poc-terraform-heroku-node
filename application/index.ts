@@ -1,8 +1,8 @@
 import * as HTTP from "http";
-import Porstgres from "pg";
+import Postgres from "pg";
 
 async function main() {
-  const postgres = new Porstgres.Client(process.env.DATABASE_URL);
+  const postgres = new Postgres.Client(process.env.DATABASE_URL);
   await postgres.connect();
 
   const server = HTTP.createServer((_request, response) => {
@@ -12,7 +12,6 @@ async function main() {
       response.end();
     });
   });
-
   server.listen(process.env.PORT);
 }
 
