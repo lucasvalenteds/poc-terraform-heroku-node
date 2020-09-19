@@ -51,6 +51,7 @@ application_url = https://poc-terraform-heroku-node.herokuapp.com
 
 ```
 $ make destroy 
+
 heroku_app.application: Refreshing state... [id=poc-terraform-heroku-node]
 heroku_addon.database: Refreshing state... [id=e30ddd8d-54a1-4490-b7ef-cbc4953deca0]
 heroku_build.application: Refreshing state... [id=2c434765-3862-479f-a548-e3226e332614]
